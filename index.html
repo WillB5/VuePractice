@@ -6,15 +6,19 @@
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     </head>
     <body>
-        <h1>Input a valid card name.</h1>
+        <h1>Input a Yu-Gi-Oh card name to be searched.</h1>
 
 
         <div id = "app">
             <input id = "inputCard" type = "text">
             <input type ="button" onclick="searchCard()">
-            <p>Card Name: {{ cardName }} </p>
-            <img>{{ cardImg }}</img>
-            <button @click="searchCard">update page</button>
+            <!-- TO DO: Make a form to receive text input from user -->
+            
+            <!-- Card info section should only appear once a card name has been entered -->
+            <div v-if ="showInfo">
+                <p>Card Name: {{ cardName }} </p>
+                <!-- TO DO: Display info about card using vue -->
+            </div>
         </div>
         
 
