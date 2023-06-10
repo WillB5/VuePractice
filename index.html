@@ -1,0 +1,23 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue Practice</title>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <h1>Input a valid card name.</h1>
+
+
+        <div id = "app">
+            <input id = "inputCard" type = "text">
+            <input type ="button" onclick="searchCard()">
+            <p>Card Name: {{ cardName }} </p>
+            <img>{{ cardImg }}</img>
+            <button @click="searchCard">update page</button>
+        </div>
+        
+
+        <script src="app.js"></script>
+    </body>
+</html>
