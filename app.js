@@ -8,7 +8,9 @@ const app = Vue.createApp({
     },
     methods: {
         searchCard(){
-            this.cardName = document.getElementById("inputCard")
+            this.cardName = document.getElementById("inputCard").value
+            console.log(this.cardName)
+            this.showInfo = !this.showInfo
         }
     }
 })

@@ -9,15 +9,22 @@
         <h1>Input a Yu-Gi-Oh card name to be searched.</h1>
 
 
+
         <div id = "app">
-            <input id = "inputCard" type = "text">
-            <input type ="button" onclick="searchCard()">
             <!-- TO DO: Make a form to receive text input from user -->
-            
+            <div v-if = "!showInfo">
+                <form name="cardsearch">
+                    <input id="inputCard" placeholder="Enter a card name" type="text" name="inputCard" >
+                    <input type="button" name="namesubmit" id='namesubmit' @click="searchCard">
+                </form>
+            </div>
+
             <!-- Card info section should only appear once a card name has been entered -->
             <div v-if ="showInfo">
                 <p>Card Name: {{ cardName }} </p>
                 <!-- TO DO: Display info about card using vue -->
+                <img v-bind:src="cardImg"></a>
+
             </div>
         </div>
         
