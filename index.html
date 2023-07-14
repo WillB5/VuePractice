@@ -14,17 +14,18 @@
             <!-- TO DO: Make a form to receive text input from user -->
             <div v-if = "!showInfo">
                 <form name="cardsearch">
-                    <input id="inputCard" placeholder="Enter a card name" type="text" name="inputCard" >
-                    <input type="button" name="namesubmit" id='namesubmit' @click="searchCard">
+                    <input id="inputCard" placeholder="Enter a card name" type="text" name="inputCard" padding = 10px>
+                    <button name="namesubmit" id='namesubmit' @click="searchCard" padding = 10px>submit</button>
                 </form>
             </div>
 
             <!-- Card info section should only appear once a card name has been entered -->
             <div v-if ="showInfo">
-                <p>Card Name: {{ cardName }} </p>
-                <!-- TO DO: Display info about card using vue -->
-                <img v-bind:src="cardImg"></a>
-
+                <img src=" " id="ygoimg">
+                <p id="ygoname">card not found</p>
+                <p id="ygoid"></p>
+                <p id="ygodesc"></p>
+                <button name="newSearch" id='newSearch' @click="showInfo = !showInfo">new search</button>
             </div>
         </div>
         
